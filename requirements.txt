@@ -1,0 +1,10 @@
+langgraph
+langchain
+langchain-community
+langchain-google-vertexai 
+langchain-core
+chainlit
+vertexai
+google-cloud-discoveryengine
+requests
+finnhub-python
