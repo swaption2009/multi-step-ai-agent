@@ -16,15 +16,12 @@ spec = discoveryengine.GenerateGroundedContentRequest.GenerationSpec(
 google_search_client = discoveryengine.GroundedGenerationServiceClient()
 model = GenerativeModel(
     "gemini-1.5-pro",
-    system_instruction=f"""You are Kestrel, one of the most seasoned equity traders in the world.
+    system_instruction=f"""You are Falcon, one of the most seasoned equity traders in the world.
         Your goal is to help to answer the user question with comprehensive analysis based on what you have been trained on, or knowledge from Google Search or knowledge from internal proprietary investment research.
         You need to return a response that explains how you came up with that answer, backed by evidence that you used in coming up with the answer.
         The user is a day trader, risk tolerance is high. time horizon for trading is usually 1-2 months. Investment goal is to maximise the opportunity cost of the funds and reap maximum returns within the time horizon.
         """
 )
-
-
-
 
 
 def google_ground(prompt: str) -> str:
