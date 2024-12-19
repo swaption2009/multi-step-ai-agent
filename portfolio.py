@@ -2,14 +2,15 @@
 
 from google.cloud import bigquery
 from vertexai.generative_models import FunctionDeclaration, GenerativeModel, Part, Tool
+from config import PROJECT_ID, BIGQUERY_DATASET_ID
+
 
 sqlGeneratorModel = GenerativeModel(
     'gemini-1.5-pro',
     generation_config={"temperature": 0,"max_output_tokens":2048},
 )
 
-PROJECT_ID = "my-vertexai-project-id"  # @param {type:"string"}
-BIGQUERY_DATASET_ID = "current_portfolio"
+
 client = bigquery.Client(project=PROJECT_ID)  # Replace with your project ID
 user_question =""
 
