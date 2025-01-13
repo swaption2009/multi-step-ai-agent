@@ -7,6 +7,3 @@ PROJECT_ID = os.getenv("GCP_PROJECT_ID")
 BIGQUERY_DATASET_ID = os.getenv("GCP_BIGQUERY_DATASET_ID")
 FINNHUB_API_KEY = os.getenv("FINNHUB_API_KEY") 
 
-# ... other configuration values
-
-

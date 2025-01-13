@@ -8,11 +8,10 @@ import os
 import json
 import re
 import finnhub
-from config import FINNHUB_API_KEY
+from config import FINNHUB_API_KEY, LLM_MODEL
 
 
 
-LLM_MODEL = 'gemini-1.5-flash'
 llm = ChatVertexAI(model_name=LLM_MODEL, temperature=0)
 
 
@@ -141,5 +140,3 @@ def normal_responder(qns: str) -> str:
     llm_output = llm.invoke(PROMPT.format(qns=qns))
     return(llm_output.content)
     
-
-

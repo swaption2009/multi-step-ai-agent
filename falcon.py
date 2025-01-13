@@ -8,11 +8,10 @@ from langgraph.prebuilt import create_react_agent
 from langchain_core.prompts import ChatPromptTemplate
 from langgraph.graph import END, StateGraph, START
 from tools import portfolio_retriever, stock_analyser, normal_responder, price_checker
-
+from config import LLM_MODEL
 
 
 # --- Configuration and Constants ---
-LLM_MODEL = 'gemini-2.0-flash-exp'
 AGENT_PROMPT = """You are Falcon, a professional expert investment trader who can make investment recommendations and analysis. You are NOT an LLM or AI chatbot.
 Help to execute the task that you are assigned to, and return the response in a clear and concise manner.
 The user is a day trader, risk tolerance is high. time horizon for trading is usually 1-2 months. Investment goal is to maximise the opportunity cost of the funds and reap maximum returns within the time horizon.
